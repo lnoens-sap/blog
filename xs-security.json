@@ -1,7 +1,33 @@
 {
-  "scopes": [],
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.ProductViewer",
+      "description": "ProductViewer"
+    },
+    {
+      "name": "$XSAPPNAME.ProductAdmin",
+      "description": "ProductAdmin"
+    }
+  ],
   "attributes": [],
-  "role-templates": [],
+  "role-templates": [
+    {
+      "name": "ProductViewer",
+      "description": "User who can only view the product list",
+      "scope-references": [
+        "$XSAPPNAME.ProductViewer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "ProductAdmin",
+      "description": "User who can view and edit the product list",
+      "scope-references": [
+        "$XSAPPNAME.ProductAdmin"
+      ],
+      "attribute-references": []
+    }
+  ],
   "xsappname": "BlogService",
   "tenant-mode": "dedicated"
 }

@@ -153,7 +153,15 @@ resources:
           redirect-uris:
             - https://*.${default-domain}/login/*
         xsappname: BlogService-${space}
-        role-collections: []
+        role-collections:
+          - description: User who can only view the product list
+            name: BlogService-ProductViewer-${space}
+            role-template-references:
+              - $XSAPPNAME.ProductViewer
+          - description: User who can view and edit the product list
+            name: BlogService-ProductAdmin-${space}
+            role-template-references:
+              - $XSAPPNAME.ProductAdmin
   - type: org.cloudfoundry.managed-service
     name: BlogService-service-db
     parameters:

@@ -1,0 +1,42 @@
+[
+	{
+		"Name": "any",
+		"Description": "any users",
+		"defaultPrivilege": {
+			"IsSimple": true,
+			"SimplePrivilege": 2
+		}
+	},
+	{
+		"Name": "authenticated-user",
+		"Description": "authenticated users",
+		"defaultPrivilege": {
+			"IsSimple": true,
+			"SimplePrivilege": 2
+		}
+	},
+	{
+		"Name": "system-user",
+		"Description": "any users",
+		"defaultPrivilege": {
+			"IsSimple": true,
+			"SimplePrivilege": 2
+		}
+	},
+	{
+		"Name": "ProductViewer",
+		"Description": "User who can only view the product list",
+		"defaultPrivilege": {
+			"IsSimple": true,
+			"SimplePrivilege": 2
+		}
+	},
+	{
+		"Name": "ProductAdmin",
+		"Description": "User who can view and edit the product list",
+		"defaultPrivilege": {
+			"IsSimple": true,
+			"SimplePrivilege": 3
+		}
+	}
+]
