@@ -5,6 +5,7 @@ service BlogServiceService
 {
     annotate Products with @restrict :
     [
+        { grant : [ 'READ' ], to : [ 'authenticated-user' ] },
         { grant : [ 'READ' ], to : [ 'ProductViewer' ] },
         { grant : [ 'READ', 'CREATE' ], to : [ 'ProductAdmin' ] }
     ];
